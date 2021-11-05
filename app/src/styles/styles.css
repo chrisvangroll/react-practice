@@ -24,4 +24,25 @@
 
 .img {
   width: 200px;
+}
+
+#root {
+  font-size: 18px;
+  background-color: #FFFBF3;
+  height: 100vh;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #030909;
+  background-color: #5998a3;
+  box-shadow: 0px 0px 6px 1px #000000;
+}
+.navLink:hover {
+  color: #030909;
+  background-color: #5998a38f;
+}
+.navLink:active {
+  color: #030909;
+  background-color: #5998a38f;
 }/*# sourceMappingURL=styles.css.map */
