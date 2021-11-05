@@ -1,0 +1,27 @@
+.boxContainer {
+  cursor: pointer;
+}
+.boxContainer .checkBox {
+  width: 1em;
+  height: 1em;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+.boxContainer .boxBorder {
+  border: none;
+}
+
+.clearAll {
+  background-color: #5998a3;
+  display: inline;
+}
+
+.test {
+  background-color: blue;
+  display: inline-block;
+}
+
+.img {
+  width: 200px;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,27 @@
+.boxContainer{
+    cursor: pointer;
+
+    .checkBox{
+        width: 1em;
+        height: 1em;
+        border: 2px solid black;
+        border-radius: 3px;
+        margin-right: 10px;
+    }  
+
+    .boxBorder{
+        border: none;
+    }
+}
+
+.clearAll{
+    background-color: $blue;
+    display: inline;
+}
+
+.test{
+    background-color: blue;
+    display: inline-block;
+}
+
+
