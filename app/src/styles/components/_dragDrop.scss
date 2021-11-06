@@ -1,21 +1,12 @@
-.stepContainer{
+.draggable{
+    background-color: $white;
+    color: $black;
     height: 80px;
-    border: solid black 1px;
-    //background-color: $black;
-    //color: $white;
-    
-    
-
-    span{
-        background-color: $blue;
-        border-radius: 50%;
-        padding: 5px 10px 5px 10px;
-        height: 40px;
-    }
-
-    .draggable{
-        background-color: $white;
-        color: $black;
-        display: inline;
-    }
+    margin-bottom: 10px;
+    background-color: $blue;
 }
+
+.dragging{
+    opacity: .5;
+}
+

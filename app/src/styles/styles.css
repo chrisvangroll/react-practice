@@ -47,18 +47,14 @@
   background-color: #5998a38f;
 }
 
-.stepContainer {
-  height: 80px;
-  border: solid black 1px;
-}
-.stepContainer span {
-  background-color: #5998a3;
-  border-radius: 50%;
-  padding: 5px 10px 5px 10px;
-  height: 40px;
-}
-.stepContainer .draggable {
+.draggable {
   background-color: #FFFBF3;
   color: #030909;
-  display: inline;
+  height: 80px;
+  margin-bottom: 10px;
+  background-color: #5998a3;
+}
+
+.dragging {
+  opacity: 0.5;
 }/*# sourceMappingURL=styles.css.map */
