@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 
-const finalSpaceCharacters = [
+const stepArray = [
   {
     id: 'fifth',
     name: 'Grill until lightly browned and flip over.'
@@ -31,35 +31,31 @@ const finalSpaceCharacters = [
 ]
 
 function DragDrop() {
-  const [characters, updateCharacters] = useState(finalSpaceCharacters);
+  const [steps, updateSteps] = useState(stepArray);
 
   function handleOnDragEnd(result) {
     if (!result.destination) return;
 
-    const items = Array.from(characters);
+    const items = Array.from(steps);
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
 
-    updateCharacters(items);
+    updateSteps(items);
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <main>
         <h1>Order the</h1>
         <DragDropContext onDragEnd={handleOnDragEnd}>
           <Droppable droppableId="characters">
             {(provided) => (
-              <ul className="characters" {...provided.droppableProps} ref={provided.innerRef}>
-                {characters.map(({id, name}, index) => {
+              <ul {...provided.droppableProps} ref={provided.innerRef}>
+                {steps.map(({id, name}, index) => {
                   return (
                     <Draggable key={id} draggableId={id} index={index}>
                       {(provided) => (
                         <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-                         
-                          <p>
                             { name }
-                          </p>
                         </li>
                       )}
                     </Draggable>
@@ -70,8 +66,7 @@ function DragDrop() {
             )}
           </Droppable>
         </DragDropContext>
-      </header>
-    </div>
+    </main>
   );
 }
 
