@@ -1,22 +1,29 @@
-.draggable{
-    background-color: $white;
-    color: $black;
-    height: 80px;
-    margin-bottom: 10px;
-    background-color: $blue;
+.dndContainer{
+
+    @media(min-width: 768px){
+        width: 450px;
+    }
+    
+    .errorMsg{
+        color: red;
+        font-weight: bold;
+    }
+
+    .successMsg{
+        color: green;
+        font-weight: bold;
+    }
+
+    .checkBtn{
+        cursor:pointer;
+        background-color: $blue;
+    }
+    
+    .wrong{
+        color: red;
+        font-weight: bold;
+        text-decoration: underline;
+    }
 }
 
-.dragging{
-    opacity: .5;
-}
-
-.checkBtn{
-    cursor:pointer;
-}
-
-.wrong{
-    color: red;
-    font-weight: bold;
-    text-decoration: underline;
-}
 

@@ -11,7 +11,7 @@ export default function CheckList() {
     });
   }
     return (
-      <div class='checkListContainer'>
+      <main class='checkListContainer'>
         <div class='d-flex flex-column '>
           <h1 class='ms-2 mt-3 text-decoration-underline'>CheckList</h1>  
             <label htmlFor="stepOne" class='m-2 step d-inline-flex align-items-center'>
@@ -77,6 +77,6 @@ export default function CheckList() {
             </label>
         </div>
         <button class='clearAll mt-2 m-2 ps-3 pt-1 pe-3 pb-1' onClick={clearAll}>Clear All</button>
-      </div>
+      </main>
     )
 }

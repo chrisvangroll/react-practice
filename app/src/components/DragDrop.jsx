@@ -50,7 +50,7 @@ function DragDrop() {
   }
 
   function btnToggle (){
-      if(isChecked==false){
+      if(isChecked===false){
         const listArray = document.querySelectorAll('li')
         let counter = 0;
         for(let i=0; i<=listArray.length-1; i++){
@@ -60,7 +60,7 @@ function DragDrop() {
             }
         }  
         setErrors(counter);
-        counter == 0 ? document.getElementById('successMsg').classList.remove('d-none'): document.getElementById('errorMsg').classList.remove('d-none');
+        counter === 0 ? document.getElementById('successMsg').classList.remove('d-none'): document.getElementById('errorMsg').classList.remove('d-none');
         setIsChecked(true);
         setBtnText('Try Again')
     }else{
@@ -75,8 +75,8 @@ function DragDrop() {
   }
  
   return (
-    <main>
-        <h1>Order the Steps</h1>
+    <main class='dndContainer'>
+        <h1 class='text-center'>Order the Steps</h1>
         <DragDropContext onDragEnd={handleOnDragEnd}>
           <Droppable droppableId="characters">
             {(provided) => (
@@ -97,9 +97,11 @@ function DragDrop() {
             )}
           </Droppable>
         </DragDropContext>
-        <div id='errorMsg' class='d-none'>{`You have ${errors} errors.`}</div>
-        <div id='successMsg' class='d-none'>Correct!</div>
-        <button class='checkBtn' onClick={btnToggle}>{btnText}</button>
+        <div id='errorMsg' class='d-none errorMsg text-center fs-3'>{`You have ${errors} errors.`}</div>
+        <div id='successMsg' class='d-none successMsg text-center fs-3'>Correct!</div>
+        <div class='d-flex justify-content-center'>
+          <button class='checkBtn mt-2' onClick={btnToggle}>{btnText}</button>
+        </div>
         {/* <button class='tryAgain d-none' onClick={tryAgain}>Try Again</button> */}
     </main>
   );

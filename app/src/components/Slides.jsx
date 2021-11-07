@@ -30,7 +30,7 @@ export default function Slides() {
         setImg(img+1);
         setStep(img+1);
         document.getElementById('backBtn').classList.remove('d-none');
-        if(img == 6){
+        if(img === 6){
             document.getElementById('forwardBtn').classList.add('d-none')
         }
     }
@@ -39,20 +39,19 @@ export default function Slides() {
         setImg(img-1);
         setStep(img-1);
         document.getElementById('forwardBtn').classList.remove('d-none');
-        console.log(img)
-        if(img == 1){
+        if(img === 1){
             document.getElementById('backBtn').classList.add('d-none')
         }
     }
 
     return (
-        <div>
+        <main>
             <h1 class='text-decoration-underline text-center mt-3'>Slide Show</h1>
             <div class ='d-flex justify-content-center'>
                 <div id='backBtn' onClick = {previousImg} class='d-none d-flex align-items-center'>
                     <i class="fs-1 chevron p-2 fas fa-chevron-left" ></i>
                 </div>
-                <img class='img' src={imageArr[img]} alt="image" />
+                <img class='img' src={imageArr[img]} alt="step" />
                 <div id='forwardBtn' class='d-flex align-items-center' onClick = {nextImg}>
                     <i class="fs-1 chevron p-2 fas fa-chevron-right" ></i>
                 </div>
@@ -60,6 +59,6 @@ export default function Slides() {
             <div class='d-flex justify-content-center'>
                 <div class='text-center w-75'>{stepArr[step]}</div>
             </div>
-        </div>
+        </main>
     )
 }
