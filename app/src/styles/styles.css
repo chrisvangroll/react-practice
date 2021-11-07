@@ -57,4 +57,14 @@
 
 .dragging {
   opacity: 0.5;
+}
+
+.checkBtn {
+  cursor: pointer;
+}
+
+.wrong {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
 }/*# sourceMappingURL=styles.css.map */
