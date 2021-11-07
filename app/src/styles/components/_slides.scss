@@ -1,3 +1,11 @@
 .img{
-    width: 200px;
+    width: 250px;
+
+    @media(min-width: 768px){
+        width: 300px;
+    }
+}
+
+.chevron{
+    cursor: pointer;
 }

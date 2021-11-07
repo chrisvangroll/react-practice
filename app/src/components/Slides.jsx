@@ -50,11 +50,11 @@ export default function Slides() {
             <h1 class='text-decoration-underline text-center mt-3'>Slide Show</h1>
             <div class ='d-flex justify-content-center'>
                 <div id='backBtn' onClick = {previousImg} class='d-none d-flex align-items-center'>
-                    <i class="fs-1 fas fa-chevron-left" ></i>
+                    <i class="fs-1 chevron p-2 fas fa-chevron-left" ></i>
                 </div>
                 <img class='img' src={imageArr[img]} alt="image" />
                 <div id='forwardBtn' class='d-flex align-items-center' onClick = {nextImg}>
-                    <i class="fs-1 fas fa-chevron-right" ></i>
+                    <i class="fs-1 chevron p-2 fas fa-chevron-right" ></i>
                 </div>
             </div>
             <div class='d-flex justify-content-center'>
