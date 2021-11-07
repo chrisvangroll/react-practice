@@ -34,7 +34,7 @@ function DragDrop() {
     
   const [steps, updateSteps] = useState(stepArray);
   const [errors, setErrors] = useState(0);
-  const [btnText, setBtnText] = useState('Check your');
+  const [btnText, setBtnText] = useState('Check Your Answers');
   const [isChecked, setIsChecked] = useState(false)
 
    
