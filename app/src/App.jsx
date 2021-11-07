@@ -11,7 +11,7 @@ function App() {
       <Router>
         <div className='app'>
         <Nav/>
-          <div className='content'>
+          <div className='content d-md-flex justify-content-md-center'>
             <Switch>
               <Route exact path="/">
                 <CheckList/>

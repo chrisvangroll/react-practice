@@ -11,9 +11,9 @@ export default function CheckList() {
     });
   }
     return (
-      <div>
-        <div class='d-flex flex-column'>
-          <h1 class='text-center mt-3 text-decoration-underline'>CheckList</h1>  
+      <div class='checkListContainer'>
+        <div class='d-flex flex-column '>
+          <h1 class='ms-2 mt-3 text-decoration-underline'>CheckList</h1>  
             <label htmlFor="stepOne" class='m-2 step d-inline-flex align-items-center'>
               <input class='d-none' type="checkbox" id='stepOne' name='steps'/>
               <div class='position-relative boxContainer' onClick={()=>{document.getElementById('firstCheck').classList.toggle('d-none'); document.getElementById('firstBox').classList.toggle('boxBorder')}}>
@@ -76,7 +76,7 @@ export default function CheckList() {
               Continue grilling until cheese is melted.
             </label>
         </div>
-        <button class='clearAll m-2 ps-3 pt-1 pe-3 pb-1' onClick={clearAll}>Clear All</button>
+        <button class='clearAll mt-2 m-2 ps-3 pt-1 pe-3 pb-1' onClick={clearAll}>Clear All</button>
       </div>
     )
 }
